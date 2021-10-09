@@ -11,6 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Public+Sans&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -74,12 +77,69 @@
             </li>
         </ul>
 
-        <div class="navBtn">
+        <div class="navBtn" id="sideNavBtn">
             <div class="stick"></div>
             <div class="stick"></div>
             <div class="stick"></div>
         </div>
     </nav>
+
+    <aside id="sideNav">
+        <ul class="menu">
+            <li class="navItem">
+                <a href="#" class="navLink">
+                    Home
+                </a>
+            </li>
+            <li class="navItem dropLink">
+                <a href="#" class="navLink">
+                    About us <i class="fas fa-angle-down"></i>
+                </a>
+                <ul class="dropdown">
+                    <li class="navItem">
+                        <a href="#" class="navLink">
+                            Who we are
+                        </a>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink">
+                            Vision
+                        </a>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink">
+                            Mission
+                        </a>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink">
+                            Supports
+                        </a>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink">
+                            Why choose us?
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navItem">
+                <a href="#" class="navLink">
+                    Works
+                </a>
+            </li>
+            <li class="navItem">
+                <a href="#" class="navLink">
+                    Clients
+                </a>
+            </li>
+            <li class="navItem">
+                <a href="#" class="navLink">
+                    Contact Us
+                </a>
+            </li>
+        </ul>
+    </aside>
 
     <div class="container my-5 p-2 hero-section d-flex justify-content-center align-items-center">
         <div class="container w-100">
@@ -446,5 +506,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
+<script>
+    let sideNavBtn = document.getElementById("sideNavBtn");
+    let sideNav = document.getElementById('sideNav');
+
+    sideNavBtn.addEventListener('click', (e) => {
+        sideNav.classList.toggle('openSideNav');
+        sideNavBtn.classList.toggle('closeNavBtn');
+    })
+</script>
 
 </html>

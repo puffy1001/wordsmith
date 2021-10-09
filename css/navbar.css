@@ -19,6 +19,7 @@ body {
   --secondary-bg-color--: #ffc52741;
   --heading-color--: #111;
   --paragraph-color--: #111;
+  background-color: #fbfbfb47;
 }
 
 #navbar {
@@ -96,14 +97,46 @@ body {
   display: none;
   visibility: hidden;
   opacity: 0;
+  z-index: 99;
 }
 #navbar .navBtn .stick {
   width: 3rem;
   height: 0.4rem;
   background-color: #111;
+  margin-bottom: 0.5rem;
+  position: relative;
+  transition: 0.2s ease all;
 }
 #navbar .navBtn .stick:nth-child(2) {
   margin: 0.5rem 0;
+}
+.closeNavBtn .stick:nth-child(2) {
+  display: none;
+}
+.closeNavBtn .stick.stick:nth-child(1) {
+  transform: rotate(45deg);
+  top: 6px;
+}
+.closeNavBtn .stick:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* side nav */
+#sideNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: rgb(255 216 103 / 95%);
+  z-index: 88;
+  width: 0px;
+  overflow: hidden;
+}
+.openSideNav {
+  width: 70% !important;
+  transition: width 0.5s ease-out;
 }
 
 /* hero section */
